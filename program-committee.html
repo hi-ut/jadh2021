@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <layout>
+        <v-container class="mt-5">
+          <h1 class="mb-10">Program Committee</h1>
+
+          <b>Program Committee:</b>
+
+          <ul>
+            <li>Paul Arthur (Edith Cowan University, Australia)</li>
+
+            <li>Marcus Bingenheimer (Temple University, USA)</li>
+
+            <li>James Cummings (Newcastle University, UK)</li>
+
+            <li>J. Stephen Downie (University of Illinois, USA)</li>
+
+            <li>Øyvind Eide (University of Cologne, Germany)</li>
+
+            <li>Makoto Goto (National Museum of Japanese History, Japan)</li>
+
+            <li>Shoichiro Hara (Kyoto University, Japan)</li>
+
+            <li>
+              Yuta Hashimoto (National Museum of Japanese History, Japan), Chair
+            </li>
+
+            <li>Bor Hodošček (Osaka University, Japan)</li>
+
+            <li>JenJou Hung (Dharma Drum Institute of Liberal Arts, Taiwan)</li>
+
+            <li>Jieh Hsiang (National Taiwan University, Taiwan)</li>
+
+            <li>Akihiro Kawase (Doshisha University, Japan)</li>
+
+            <li>Nobuhiko Kikuchi (Kansai University, Japan)</li>
+
+            <li>
+              Asanobu Kitamoto (ROIS-DS Center for Open Data in the Humanities /
+              National Institute of Informatics, Japan)
+            </li>
+
+            <li>Maciej Eder (Pedagogical University of Kraków, Poland)</li>
+
+            <li>
+              Yoko Mabuchi (National Institute for Japanese Language and
+              Linguistics, Japan)
+            </li>
+
+            <li>A. Charles Muller (University of Tokyo, Japan)</li>
+
+            <li>Hajime Murai (Future University Hakodate, Japan)</li>
+
+            <li>
+              Kiyonori Nagasaki (International Institute for Digital Humanities,
+              Japan)
+            </li>
+
+            <li>Satoru Nakamura (University of Tokyo, Japan)</li>
+
+            <li>Chifumi Nishioka (Kyoto University, Japan)</li>
+
+            <li>Ikki Ohmukai (University of Tokyo, Japan)</li>
+
+            <li>Geoffrey Rockwell (University of Alberta, Canada)</li>
+
+            <li>Martina Scholger (University of Graz, Austria)</li>
+
+            <li>Masahiro Shimoda (University of Tokyo, Japan)</li>
+
+            <li>Raymond Siemens (University of Victoria, Canada)</li>
+
+            <li>Tomoji Tabata (Osaka University, Japan)</li>
+
+            <li>Ruck Thawonmas (Ritsumeikan University, Japan)</li>
+
+            <li>
+              Toru Tomabechi (International Institute for Digital Humanities,
+              Japan)
+            </li>
+
+            <li>Kathryn Tomasek (Wheaton College, USA)</li>
+
+            <li>Ayaka Uesaka (Osaka University, Japan)</li>
+
+            <li>Raffaele Viglianti (University of Maryland, USA)</li>
+
+            <li>Christian Wittern (Kyoto University, Japan)</li>
+
+            <li>Taizo Yamada (University of Tokyo, Japan)</li>
+
+            <li>Natsuko Yoshiga (Saga University, Japan)</li>
+          </ul>
+        </v-container>
+      </layout>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="layout/default.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        computed: {
+          mobileFlag() {
+            const bp = this.$vuetify.breakpoint.name;
+            console.log({ bp });
+            if (bp === "xs" || bp === "sm") {
+              return true;
+            } else {
+              return false;
+            }
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

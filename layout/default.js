@@ -66,6 +66,15 @@ Vue.component("Layout", {
             <v-list-item-title v-text="'Local Organizers'" />
           </v-list-item-content>
         </v-list-item>
+
+        <v-list-item
+          link
+          href="program-committee.html"
+        >
+          <v-list-item-content>
+            <v-list-item-title v-text="'Program Committee'" />
+          </v-list-item-content>
+        </v-list-item>
       </v-list-group>
 
       <v-list-item link exact href="contact.html">
