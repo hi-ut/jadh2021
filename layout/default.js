@@ -2,7 +2,8 @@ Vue.component("Layout", {
   data: function () {
     return {
       fab: false,
-      drawer: this.mobileFlag ? false : true,
+      drawer: false,
+      mobileFlag: false,
     };
   },
   methods: {
@@ -15,16 +16,33 @@ Vue.component("Layout", {
       const top = window.pageYOffset || e.target.scrollTop || 0;
       this.fab = top > 20;
     },
+    
+    setMobileFlag(){
+      const bp = this.$vuetify.breakpoint.name;
+      let mobileFlag = false
+      if (bp === "xs" || bp === "sm") {
+        mobileFlag = true
+      } else {
+        this.drawer = true
+      }
+      
+      this.mobileFlag = mobileFlag
+    }
+    
   },
   computed: {
-    mobileFlag() {
-      const bp = this.$vuetify.breakpoint.name;
-      console.log({ bp });
-      if (bp === "xs" || bp === "sm") {
-        return true;
-      } else {
-        return false;
-      }
+    bp(){
+      return this.$vuetify.breakpoint.name
+    }
+  },
+  
+  created(){
+    this.setMobileFlag()
+  },
+  
+  watch: {
+    bp: function () {
+      this.setMobileFlag()
     },
   },
   template: `
@@ -94,7 +112,7 @@ Vue.component("Layout", {
     ></v-app-bar-nav-icon>
 
     <v-toolbar-title>
-      <a href="/" style="color: inherit; text-decoration: inherit">
+      <a href="index.html" style="color: inherit; text-decoration: inherit">
         {{ 'JADH2021' }}
       </a>
     </v-toolbar-title>
