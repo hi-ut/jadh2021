@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <layout>
+        <v-container class="mt-5">
+          <h1 class="mb-5">WELCOME TO JADH2021</h1>
+          <h3>The 11th Conference of Japanese Association for Digital Humanities (JADH2021), "Digital Humanities and COVID-19"</h3>
+          <h3>6-8 September, The University of Tokyo, Tokyo, Japan</h3>
+
+          <p class="my-5"><a href="https://www.jadh.org/">The Japanese Association for Digital Humanitie</a> is pleased to organize its 11th conference, 11th Conference of Japanese Association for Digital Humanities (JADH2021), hosted by the Historiographical Institute, The University of Tokyo.</p>
+
+          <h2 class="mt-10">News</h3>
+          <ul>
+            <li>(2021-02-25) JADH2021 Conference Website is Open.</li>
+          </ul>
+
+          <h2 class="mt-10">Organized by</h3>
+          <ul>
+            <li>Organizing Committee, <a href="http://www.jadh.org/">Japanese Association for Digital Humanities</a></li>
+          </ul>
+
+          <h2 class="mt-10">Hosted by</h3>
+          <ul>
+            <li><a href="https://www.hi.u-tokyo.ac.jp/index.html">Historiographical Institute, The University of Tokyo</a></li>
+          </ul>
+
+          <h2 class="mt-10">Co-organized by</h3>
+          <ul>
+            <li><a href="https://www.dhii.jp/index-e.html">International Institute for Digital Humanities</a></li>
+          </ul>
+
+          <h2 class="mt-10">Past JADH Conferences</h3>
+          <ul>
+            <li><a href="http://www.jadh.org/node/8">List of JADH conferences</a></li>
+          </ul>
+        </v-container>
+      </layout>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="layout/default.js">
+    </script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        computed: {
+    mobileFlag() {
+      const bp = this.$vuetify.breakpoint.name;
+      console.log({ bp });
+      if (bp === "xs" || bp === "sm") {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
+      });
+    </script>
+  </body>
+</html>

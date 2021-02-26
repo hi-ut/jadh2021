@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <layout>
+        
+        <v-container class="mt-5">
+          <h1 class="mb-10">CFP</h1>
+
+          <p>The Japanese Association for Digital Humanities (JADH) is pleased to announce its 11th annual conference, to be held virtually by the Historiographical Institute, The University of Tokyo on September 6-8, 2021, around 9am to 6pm in Japanese Standard Time.</p>
+
+            <p>We invite proposals on all aspects of Digital Humanities, and especially encourage papers treating topics that deal with practices that cross borders, for example, between academic fields, media, languages, cultures, organizations, and so on, as related to the field of Digital Humanities.</p>
+            
+            <p>During the pandemic, researchers have also been affected in various aspects . However, the digital environment has been instrumental in alleviating some of the hardships. Overall the contribution to DH has been positive, since much of the digital research environment was in place before the pandemic. Moreover, DH-related research may help to improve this difficult situation. Therefore, we welcome presentations related to the theme of Digital Humanities and COVID-19. Although this is one suggested focus, we nonetheless welcome papers on a broad range of DH topics, detailed below.</p>
+            
+            <p>Research issues, including data mining, information design and modeling, software studies, and humanities research enabled through the digital medium; computer-based research and computer applications in literary, linguistic, cultural, and historical studies, including electronic literature, public humanities, and interdisciplinary aspects of modern scholarship. Examples might include text analysis, corpora, corpus linguistics, language processing, language learning, and endangered languages; the digital arts, architecture, music, film, theater, new media and related areas; the creation and curation of humanities digital resources; the role of digital humanities in academic curricula.</p>
+
+            <p>The range of topics covered by Digital Humanities can also be consulted in the journal Digital Scholarship in the Humanities (<a href="http://dsh.oxfordjournals.org/">http://dsh.oxfordjournals.org/</a>), Oxford University Press.</p>
+
+            <p>Abstracts submitted should be of 500-1000 words in length in English, including the title.</p>
+
+              <p>Please submit abstracts via the open conference system (link below) <b>by 11:59 PM, June 7, 2021 (HAST)</b>.</p>
+
+              <p><a href="https://easychair.org/conferences/?conf=jadh2021">https://easychair.org/conferences/?conf=jadh2021</a></p>
+
+              <p>Presenters will be notified of acceptance on <b>July 7, 2021</b>.</p>
+
+              <p>Type of proposals:
+                <ol>
+                  <li><b>Poster presentations</b>: Poster presentations may include work-in-progress on any of the topics described above as well as demonstrations of computer technology, software and digital projects. A separate poster session will open the conference, during which time presenters should be on hand to explain their work, share their ideas with other delegates, and answer questions. Posters will also be on display at various times during the conference, and presenters are encouraged to provide material and handouts with more detailed information and URLs.</li>
+                  <li><b>Short papers</b>: Short papers are allotted 10 minutes (plus 5 minutes for questions) and are suitable for describing work-in-progress and reporting on shorter experiments and software and tools in early stages of development.</li>
+                  <li><b>Long papers</b>: Long papers are allotted 20 minutes (plus 10 minutes for questions) and are intended for presenting substantial unpublished research and reporting on significant new digital resources or methodologies.</li>
+                  <li><b>Panels</b>: Panels (90 minutes) are comprised of either: (a) Three long papers on a joint theme. All abstracts should be submitted together with a statement, of approximately 500-1000 words, outlining the session topic and its relevance to current directions in the Digital Humanities; or (b) A panel of four to six speakers. The panel organizer should submit a 500-1000 words outline of the topic session and its relevance to current directions in the Digital Humanities as well as an indication from all speakers of their willingness to participate.</li>
+                </ol>
+              </p>
+        </v-container>
+      </layout>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="layout/default.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        computed: {
+          mobileFlag() {
+            const bp = this.$vuetify.breakpoint.name;
+            console.log({ bp });
+            if (bp === "xs" || bp === "sm") {
+              return true;
+            } else {
+              return false;
+            }
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
