@@ -16,33 +16,32 @@ Vue.component("Layout", {
       const top = window.pageYOffset || e.target.scrollTop || 0;
       this.fab = top > 20;
     },
-    
-    setMobileFlag(){
+
+    setMobileFlag() {
       const bp = this.$vuetify.breakpoint.name;
-      let mobileFlag = false
+      let mobileFlag = false;
       if (bp === "xs" || bp === "sm") {
-        mobileFlag = true
+        mobileFlag = true;
       } else {
-        this.drawer = true
+        this.drawer = true;
       }
-      
-      this.mobileFlag = mobileFlag
-    }
-    
+
+      this.mobileFlag = mobileFlag;
+    },
   },
   computed: {
-    bp(){
-      return this.$vuetify.breakpoint.name
-    }
+    bp() {
+      return this.$vuetify.breakpoint.name;
+    },
   },
-  
-  created(){
-    this.setMobileFlag()
+
+  created() {
+    this.setMobileFlag();
   },
-  
+
   watch: {
     bp: function () {
-      this.setMobileFlag()
+      this.setMobileFlag();
     },
   },
   template: `
@@ -107,7 +106,7 @@ Vue.component("Layout", {
   </v-navigation-drawer>
 
   <v-app-bar app>
-    <v-app-bar-nav-icon v-if="mobileFlag"
+    <v-app-bar-nav-icon
       @click.stop="drawer = !drawer"
     ></v-app-bar-nav-icon>
 
@@ -119,10 +118,6 @@ Vue.component("Layout", {
   </v-app-bar>
 
   <v-main>
-  <v-img
-          v-if="!mobileFlag"
-          src="assets/b824e5648787a6dd42c2a22df882b7f9.jpg"
-        ></v-img>
   <slot />
 
   <v-container class="mt-10">

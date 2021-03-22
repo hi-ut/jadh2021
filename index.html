@@ -1,5 +1,8 @@
 <html>
   <head>
+    <title>JADH2021 | The 11th Conference of Japanese Association for Digital Humanities (JADH2021)
+      "Digital Humanities and COVID-19"</title>
+    <meta charset="utf-8">
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
       rel="stylesheet"
@@ -16,10 +19,23 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
     />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="layout/default.js"> </script>
   </head>
   <body>
     <div id="app">
       <layout>
+        <v-parallax src="assets/top.png" height="250">
+          <div align-center justify-center class="white--text text-center py-5" style="background-color: rgba(0,0,0, 0.6);">
+            <h1 style="font-size: 60px;">
+              JADH2021
+            </h1>
+            <h3>The 11th Conference of Japanese Association for Digital Humanities (JADH2021)
+              "Digital Humanities and COVID-19"
+              </h3>
+          </div>
+        </v-parallax>
         <v-container class="mt-5">
           <h1 class="mb-5">WELCOME TO JADH2021</h1>
           <h3>The 11th Conference of Japanese Association for Digital Humanities (JADH2021), "Digital Humanities and COVID-19"</h3>
@@ -54,25 +70,21 @@
         </v-container>
       </layout>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-    <script src="layout/default.js">
-    </script>
     <script>
       new Vue({
         el: "#app",
         vuetify: new Vuetify(),
         computed: {
-    mobileFlag() {
-      const bp = this.$vuetify.breakpoint.name;
-      console.log({ bp });
-      if (bp === "xs" || bp === "sm") {
-        return true;
-      } else {
-        return false;
-      }
-    },
-  },
+          mobileFlag() {
+            const bp = this.$vuetify.breakpoint.name;
+            console.log({ bp });
+            if (bp === "xs" || bp === "sm") {
+              return true;
+            } else {
+              return false;
+            }
+          },
+        },
       });
     </script>
   </body>
